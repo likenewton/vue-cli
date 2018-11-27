@@ -4,13 +4,15 @@
     <div class="page-container">
       <router-view />
     </div>
+    <v-footer></v-footer>
   </div>
 </template>
-
 <script>
 import Vue from 'vue'
 import vHeader from '@/components/common/vHeader'
+import vFooter from '@/components/common/vFooter'
 Vue.component('vHeader', vHeader)
+Vue.component('vFooter', vFooter)
 
 export default {
   name: 'App'
@@ -18,6 +20,15 @@ export default {
 
 </script>
 <style lang="scss">
+@import '../src/assets/style/base.scss';
+
+html,
+body {
+  min-height: 100%;
+  height: 100px;
+  background: #fff;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
