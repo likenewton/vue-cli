@@ -134,6 +134,17 @@
     padding: 2px 14px;
 }
 
+.swiper-pagination-switch {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    margin: 0 4px;
+    border-radius: 50%;
+    &.swiper-active-switch {
+        background: #fff;
+    }
+}
+
 
 
 // ===== scroll bar ======

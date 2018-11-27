@@ -42,7 +42,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      msg: '13'
+      swiper: null
     }
   },
   methods: {
@@ -54,13 +54,17 @@ export default {
     }
   },
   mounted() {
-    new Swiper('.js-Swiper', {})
+    this.swiper = new Swiper('.js-Swiper', {
+      loop: true,
+      pagination: '.swiper-pagination'
+    })
   }
 }
 
 </script>
 <style scoped lang="scss">
 @import '../../static/swiper2/idangerous.swiper.css';
+
 .banner-wrapper {
   height: 0;
   padding-top: 450px;
@@ -87,10 +91,26 @@ export default {
     width: 100%;
     height: 100%;
     background: pink;
+
     .js-Swiper {
+      position: relative;
       width: 281px;
       height: 164px;
       overflow: hidden;
+
+      .swiper-pagination {
+        position: absolute;
+        bottom: 6px;
+        height: 10px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        .swiper-pagination-switch {
+          height: 10px;
+        }
+      }
     }
   }
 }
