@@ -7,7 +7,7 @@
         </div>
           <ul class="nav-list fr clearfix">
             <li v-for="(item, index) in list" :key="index" @mouseover="getHoverItem(item.subMenu)">
-              <a :class="{active: item.active}" :href="item.href || 'javascript:'">{{item.text}}</a>
+              <router-link :to="{name: item.route}">{{item.text}}</router-link>
             </li>
           </ul>
         </div>
@@ -33,9 +33,10 @@ export default {
       // 主菜单列表
       list: [{
         text: '首页',
-        active: true
+        route: 'Home'
       }, {
-        text: '游戏介绍'
+        text: '游戏介绍',
+        route: 'Introduction'
       }, {
         text: '游戏攻略'
       }, {
@@ -58,7 +59,9 @@ export default {
       // 被选中的item
       hoverItem: [],
       // 是否显示submenu
-      isShowSubMenu: false
+      isShowSubMenu: false,
+      // 当前页面的路由名称
+      routeName: 'Home'
     }
   },
   methods: {
@@ -78,6 +81,8 @@ export default {
 .v-header {
   position: relative;
   height: 50px;
+  border-radius: 5px;
+  overflow: hidden;
 
   .logo-wrapper {
     margin-left: 8%;
@@ -118,7 +123,7 @@ export default {
         line-height: 50px;
         padding: 0 14px;
 
-        &.active,
+        &.router-link-exact-active,
         &:hover {
           color: #ff6900;
           border-bottom: 4px solid #ff6900;

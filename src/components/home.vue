@@ -1,24 +1,44 @@
 <template>
   <div class="container">
-    <div class="banner-wrapper"></div>
+    <v-banner></v-banner>
     <div class="module-core">
       <div class="section section_1">
         <div class="left"></div>
         <div class="right">
           <v-bar title="捕鱼攻略" extend="更多 +" @vBarExtendFn="showStrategy"></v-bar>
-          <div class="js-Swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href=""><img src="../assets/image/NP1-1.jpg"></a>
+          <div class="newsinfo clearfix">
+            <ul class="newslist">
+              <li class="news-item">
+                <span class="pointer"></span>
+                <span class="text">终极狩猎，海魔来袭</span>
+              </li>
+              <li class="news-item">
+                <span class="pointer"></span>
+                <span class="text">海妖漩涡，爆金无限</span>
+              </li>
+              <li class="news-item">
+                <span class="pointer"></span>
+                <span class="text">钓鱼黑科技，告诉你如何新姿势钓鱼</span>
+              </li>
+              <li class="news-item">
+                <span class="pointer"></span>
+                <span class="text">捕鱼圣手全新版本火热来袭</span>
+              </li>
+            </ul>
+            <div class="js-Swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href=""><img src="../assets/image/NP1-1.jpg"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href=""><img src="../assets/image/NP1-2.jpg"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href=""><img src="../assets/image/NP1-3.jpg"></a>
+                </div>
               </div>
-              <div class="swiper-slide">
-                <a href=""><img src="../assets/image/NP1-2.jpg"></a>
-              </div>
-              <div class="swiper-slide">
-                <a href=""><img src="../assets/image/NP1-3.jpg"></a>
-              </div>
+              <div class="swiper-pagination" style="cursor: default"></div>
             </div>
-            <div class="swiper-pagination" style="cursor: default"></div>
           </div>
         </div>
       </div>
@@ -35,8 +55,10 @@
 <script>
 import Vue from 'vue'
 import vBar from '@/components/common/vBar'
+import vBanner from '@/components/common/vBanner'
 import Swiper from '../../static/swiper2/idangerous.swiper.min.js'
 Vue.component('vBar', vBar)
+Vue.component('vBanner', vBanner)
 
 export default {
   name: 'Home',
@@ -56,7 +78,10 @@ export default {
   mounted() {
     this.swiper = new Swiper('.js-Swiper', {
       loop: true,
-      pagination: '.swiper-pagination'
+      pagination: '.swiper-pagination',
+      autoplay: 5000,
+      paginationClickable: true,
+      autoplayDisableOnInteraction: false
     })
   }
 }
@@ -64,13 +89,6 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '../../static/swiper2/idangerous.swiper.css';
-
-.banner-wrapper {
-  height: 0;
-  padding-top: 450px;
-  background: url("../assets/image/banner.jpg") top center no-repeat;
-}
-
 .screen-shot-wrapper {
   display: flex;
   justify-content: space-around;
@@ -90,10 +108,45 @@ export default {
   .right {
     width: 100%;
     height: 100%;
-    background: pink;
+
+    .newsinfo {
+      padding: 20px;
+
+      .newslist {
+        float: left;
+        width: 369px;
+        height: 164px;
+
+        .news-item {
+          position: relative;
+          line-height: 28px;
+
+          .pointer {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #888;
+            vertical-align: top;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          .text {
+            padding-left: 10px;
+            font-size: 14px;
+            color: #333;
+            &:hover {
+              color: #ff6900;
+            }
+          }
+        }
+      }
+    }
 
     .js-Swiper {
       position: relative;
+      float: right;
       width: 281px;
       height: 164px;
       overflow: hidden;
@@ -107,9 +160,6 @@ export default {
         transform: translateX(-50%);
         display: flex;
         justify-content: center;
-        .swiper-pagination-switch {
-          height: 10px;
-        }
       }
     }
   }

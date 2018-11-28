@@ -37,7 +37,7 @@ export default {
   text-align: center;
   border-top: 2px solid #ff6900;
   * {
-    font-size: 14px;
+    font-size: 12px;
   }
   .foot_nav {
     padding: 10px 0;
