@@ -91,7 +91,6 @@ export default {
   position: relative;
   height: 50px;
   border-radius: 5px;
-  overflow: hidden;
 
   .logo-wrapper {
     margin-left: 8%;
