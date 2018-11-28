@@ -7,7 +7,7 @@
         </div>
           <ul class="nav-list fr clearfix">
             <li v-for="(item, index) in list" :key="index" @mouseover="getHoverItem(item.subMenu)">
-              <router-link :to="{name: item.route}">{{item.text}}</router-link>
+              <router-link :class="{active: routeName === item.route}" :to="{name: item.route}">{{item.text}}</router-link>
             </li>
           </ul>
         </div>
@@ -66,12 +66,21 @@ export default {
   },
   methods: {
     getHoverItem(data) {
+      console.log(data)
       if (data) {
         this.isShowSubMenu = true
         this.hoverItem = data
       } else {
         this.isShowSubMenu = false
       }
+    }
+  },
+  mounted() {
+    this.routeName = this.$route.name
+  },
+  watch: {
+    '$route': function(newVal, oldVal) {
+      this.routeName = newVal.name
     }
   }
 }
@@ -123,7 +132,7 @@ export default {
         line-height: 50px;
         padding: 0 14px;
 
-        &.router-link-exact-active,
+        &.active,
         &:hover {
           color: #ff6900;
           border-bottom: 4px solid #ff6900;
