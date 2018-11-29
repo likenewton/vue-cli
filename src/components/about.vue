@@ -5,14 +5,14 @@
       <div class="section section_1 clearfix">
         <div class="left fbs-left">
           <div class="article-list">
-            <v-bar title="介绍列表"></v-bar>
+            <v-bar title="关于我们"></v-bar>
             <div class="article-title-list">
               <v-article-title v-for="(item, index) in disTplList" :key="index" :infos="item" @toChoice="renderNewArticle"></v-article-title>
             </div>
           </div>
         </div>
         <div class="right fbs_right">
-          <v-bar title="捕鱼介绍"></v-bar>
+          <v-bar title="企业信息"></v-bar>
           <div class="article-container" v-html="articleTpl"></div>
         </div>
       </div>
@@ -31,15 +31,15 @@ Vue.component('vBanner', vBanner)
 Vue.component('vArticleTitle', vArticleTitle)
 
 export default {
-  name: 'introduction',
+  name: 'About',
   data() {
     return {
       // 这里面有所有的文章，但不一定都需要展示
-      tplData: STATIC.introductionTplData,
+      tplData: STATIC.aboutTplData,
       // 这里是需要展示的文章
-      disTplList: STATIC.introductionDisTplList,
+      disTplList: STATIC.aboutDisTplList,
       // 当前选定的文章id
-      choiceId: STATIC.introductionDisTplList[0].id
+      choiceId: STATIC.aboutDisTplList[0].id
     }
   },
   methods: {
@@ -53,13 +53,13 @@ export default {
     }
   },
   mounted() {
-    this.choiceId = localStorage.getItem('introduction_id') || this.choiceId
+    this.choiceId = localStorage.getItem('about_id') || this.choiceId
     this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
   },
   watch: {
     '$route': function(newVal, oldVal) {
       if (newVal.query.id) {
-        localStorage.setItem('introduction_id', newVal.query.id)
+        localStorage.setItem('about_id', newVal.query.id)
         this.choiceId = newVal.query.id
       }
       this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })

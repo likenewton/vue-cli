@@ -1,0 +1,1 @@
+<p>strategy_2_tpl</p>

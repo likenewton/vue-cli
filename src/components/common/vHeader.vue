@@ -38,23 +38,16 @@ export default {
         text: '游戏介绍',
         route: 'Introduction'
       }, {
-        text: '游戏攻略'
+        text: '游戏攻略',
+        route: 'Strategy'
       }, {
         text: '游戏下载',
-        subMenu: [{
-          text: '全名英雄欢乐斗地主'
-        }, {
-          text: '麻将高手'
-        }]
+        route: 'Download'
       }, {
         text: '用户中心',
-        subMenu: [{
-          text: 'Newton'
-        }, {
-          text: 'Ailsa'
-        }]
       }, {
-        text: '关于我们'
+        text: '关于我们',
+        route: 'About'
       }],
       // 被选中的item
       hoverItem: [],

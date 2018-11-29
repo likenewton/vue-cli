@@ -3,7 +3,7 @@
     <router-link :to="{name: routeName, query: {id: infos.id}}">
       <img class="logo" :src="infos.logo">
       <span class="text ellipsis">{{infos.title}}</span>
-      <span class="date">{{infos.date}}</span>
+      <span class="date" v-if="infos.date">{{infos.date}}</span>
     </router-link>
   </div>
 </template>

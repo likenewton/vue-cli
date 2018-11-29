@@ -16,7 +16,7 @@ export default {
 
 </script>
 <style scoped lang="scss">
-$red: #e92322;
+$red: #f08200;
 
 .v-bar {
   position: relative;
@@ -34,7 +34,7 @@ $red: #e92322;
     border-radius: 5px;
     width: 5px;
     height: 12px;
-    background: $red;
+    background: #e92322;
     margin-right: 6px;
     vertical-align: initial;
   }
