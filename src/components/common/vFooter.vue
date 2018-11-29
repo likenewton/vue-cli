@@ -11,7 +11,7 @@
       </ul>
     </div>
     <p>北京麦麦畅游科技有限公司 联系电话：13811111193 联系地址：北京市朝阳区北苑路170号3号楼7层1单元801-77</p>
-    <p>文化部网络游戏举报和联系电子邮箱：<a href="mailto:wlwh@vip.sina.com">wlwh@vip.sina.com</a> 纠纷处理方式：<a href="about.html">联系客服</a>或依《<a href="service.html">用户协议</a>》约定方式处理</p>
+    <p>文化部网络游戏举报和联系电子邮箱：<a href="mailto:wlwh@vip.sina.com">wlwh@vip.sina.com</a> 纠纷处理方式：联系客服或依《用户协议》约定方式处理</p>
     <p class="youxidzbq"><a href="../../assets/image/wenwangwen1.jpg" target="_blank">京网文 [2015] 2363-454号</a>&nbsp;&nbsp;&nbsp;&nbsp;京ICP备16007680号&nbsp;&nbsp;&nbsp;&nbsp;文网游备字〔2017〕Ｍ-CBG 0181 号 <a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/gameNetTag/4028c08c5a164052015a3a5bde116bf7" target="_blank"><img src="../../assets/image/youxidzbq.png" width="36" alt=""></a></p>
     <div class="rz"><a class="rz1" href=""><img src="../../assets/image/rz.png"></a><a class="rz2" href=""><img src="../../assets/image/rz.png"></a><a class="rz3" href=""><img src="../../assets/image/rz.png"></a><a class="rz4" href=""><img src="../../assets/image/rz.png"></a></div>
   </div>
