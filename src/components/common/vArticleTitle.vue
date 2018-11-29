@@ -1,8 +1,9 @@
 <template>
   <div class="v-article-title pointer" @click="$emit('toChoice', infos.id)">
     <router-link :to="{name: routeName, query: {id: infos.id}}">
-      <img class="logo" :src="infos.logo">
-      <span class="text ellipsis">{{infos.title}}</span>
+      <img class="logo" :src="infos.logo" v-if="infos.logo">
+      <i class="iconfont" v-if="infos.icon" v-html="infos.icon"></i>
+      <span class="text ellipsis" :class="{'no-date': !infos.date}">{{infos.title}}</span>
       <span class="date" v-if="infos.date">{{infos.date}}</span>
     </router-link>
   </div>
@@ -45,6 +46,10 @@ $activeColor: #ff6900;
     }
   }
 
+  .iconfont {
+    font-size: 24px;
+  }
+
   &:hover {
     * {
       color: $activeColor;
@@ -72,6 +77,9 @@ $activeColor: #ff6900;
     top: 0;
     padding-left: 36px;
     padding-right: 70px;
+    &.no-date {
+      padding-right: 15px;
+    }
   }
 
   * {

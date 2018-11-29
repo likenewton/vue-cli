@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="containers">
     <v-banner></v-banner>
     <div class="module-core">
       <div class="section section_1 clearfix">
@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="right fbs_right">
-          <v-bar title="捕鱼攻略"></v-bar>
+          <v-bar :title="articleTitle ? articleTitle.title : '404-没有找到对应的文章'"></v-bar>
           <div class="article-container" v-html="articleTpl"></div>
         </div>
       </div>
@@ -50,6 +50,16 @@ export default {
   computed: {
     articleTpl() {
       return this.tplData[this.choiceId]
+    },
+    articleTitle() {
+      let obj = {}
+      this.disTplList.forEach((v) => {
+        if (v.id === this.choiceId) {
+          obj = v
+          return false
+        }
+      })
+      return obj
     }
   },
   mounted() {

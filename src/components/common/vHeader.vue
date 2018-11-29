@@ -44,7 +44,7 @@ export default {
         text: '游戏下载',
         route: 'Download'
       }, {
-        text: '用户中心',
+        text: '用户中心'
       }, {
         text: '关于我们',
         route: 'About'

@@ -35,24 +35,8 @@ module.exports = {
   // 游戏介绍展示文章
   introductionDisTplList: [{
     id: '_1', // 这个id很重要对应的是STATIC.tplData中的tpl
-    title: '终极狩猎，海魔来袭',
-    date: '2018-11-25',
+    title: '捕鱼圣手游戏介绍',
     logo: require('../image/logo_01.png')
-  }, {
-    id: '_2',
-    title: '海妖漩涡，爆金无限',
-    date: '2018-11-24',
-    logo: require('../image/logo_02.png')
-  }, {
-    id: '_3',
-    title: '钓鱼黑科技，告诉你如何新姿势钓鱼',
-    date: '2018-11-24',
-    logo: require('../image/logo_01.png')
-  }, {
-    id: '_4',
-    title: '捕鱼圣手全新版本火热来袭',
-    date: '2018-11-20',
-    logo: require('../image/logo_02.png')
   }],
   strategyDisTplList: [{
     id: '_1', // 这个id很重要对应的是STATIC.tplData中的tpl
@@ -77,7 +61,23 @@ module.exports = {
   }],
   aboutDisTplList: [{
     id: '_1',
-    title: '企业信息',
-    logo: require('../image/logo_01.png')
+    title: '公司介绍',
+    icon: '&#xe633;'
+  }, {
+    id: '_2',
+    title: '用户协议',
+    icon: '&#xe61d;'
+  }, {
+    id: '_3',
+    title: '家长监护工程',
+    icon: '&#xe6ac;'
+  }, {
+    id: '_4',
+    title: '用户纠纷处理',
+    icon: '&#xe6c5;'
+  }, {
+    id: '_5',
+    title: '网络游戏服务格式化协议必备条款',
+    icon: '&#xe604;'
   }]
 }

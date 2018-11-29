@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="containers">
     <v-banner></v-banner>
     <div class="module-core">
       <div class="section section_1">
@@ -45,9 +45,11 @@
       <div class="section section_2">
         <v-bar title="捕鱼截图" extend="更多 +" @vBarExtendFn="showScreenShot"></v-bar>
         <div class="screen-shot-wrapper">
-          <img src="../assets/image/PIC4-1.jpg" alt="">
-          <img src="../assets/image/PIC4-2.jpg" alt="">
+          <img v-for="(item, index) in imgList" :key="index" :src="item.src" v-show="index < currentPage * 2 && index >= (currentPage - 1) * 2">
         </div>
+          <div class="pagination-wrapper">
+            <b-pagination :total-rows="4" v-model="currentPage" :per-page="2" hide-goto-end-buttons prev-text="上一页" next-text="下一页"></b-pagination>
+          </div>
         </div>
       </div>
     </div>
@@ -64,7 +66,17 @@ export default {
   name: 'Home',
   data() {
     return {
-      swiper: null
+      currentPage: 1,
+      swiper: null,
+      imgList: [{
+        src: require('../assets/image/PIC4-1.jpg')
+      }, {
+        src: require('../assets/image/PIC4-2.jpg')
+      }, {
+        src: require('../assets/image/PIC4-3.jpg')
+      }, {
+        src: require('../assets/image/PIC4-4.jpg')
+      }]
     }
   },
   methods: {
@@ -89,6 +101,7 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '../../static/swiper2/idangerous.swiper.css';
+
 .screen-shot-wrapper {
   display: flex;
   justify-content: space-around;
@@ -136,6 +149,7 @@ export default {
             padding-left: 10px;
             font-size: 14px;
             color: #333;
+
             &:hover {
               color: #ff6900;
             }
@@ -167,6 +181,13 @@ export default {
 
 .section_2 {
   margin-top: 30px;
+
+  .pagination-wrapper {
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+  }
 }
 
 </style>
