@@ -59,7 +59,6 @@ export default {
   },
   methods: {
     getHoverItem(data) {
-      console.log(data)
       if (data) {
         this.isShowSubMenu = true
         this.hoverItem = data

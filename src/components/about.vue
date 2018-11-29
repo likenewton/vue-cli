@@ -63,7 +63,11 @@ export default {
     }
   },
   mounted() {
-    this.choiceId = localStorage.getItem('about_id') || this.choiceId
+    if (this.$route.query.id) {
+      this.choiceId = this.$route.query.id
+    } else {
+      this.choiceId = localStorage.getItem('about_id') || this.choiceId
+    }
     this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
   },
   watch: {
@@ -73,6 +77,7 @@ export default {
         this.choiceId = newVal.query.id
       }
       this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
+      document.body.scrollTop = document.documentElement.scrollTop = 0
     }
   }
 }

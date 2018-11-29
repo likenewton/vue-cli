@@ -3,11 +3,11 @@
     <p>抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防上当受骗。适度游戏益脑，沉迷游戏伤身。</p>
     <div class="foot_nav">
       <ul>
-        <li><a href="about.html">公司介绍</a></li>
-        <li><a href="protocols.html">用户协议</a></li>
-        <li><a href="custody.html">家长监护工程</a></li>
-        <li><a href="dispute.html">用户纠纷处理</a></li>
-        <li><a href="service.html">网络游戏服务格式化协议必备条款</a></li>
+        <li><router-link :to="{name: 'About', query: {id: '_1'}}">公司介绍</router-link></li>
+        <li><router-link :to="{name: 'About', query: {id: '_2'}}">用户协议</router-link></li>
+        <li><router-link :to="{name: 'About', query: {id: '_3'}}">家长监护工程</router-link></li>
+        <li><router-link :to="{name: 'About', query: {id: '_4'}}">用户纠纷处理</router-link></li>
+        <li><router-link :to="{name: 'About', query: {id: '_5'}}">网络游戏服务格式化协议必备条款</router-link></li>
       </ul>
     </div>
     <p>北京麦麦畅游科技有限公司 联系电话：13811111193 联系地址：北京市朝阳区北苑路170号3号楼7层1单元801-77</p>
@@ -20,9 +20,7 @@
 export default {
   name: 'vFooter',
   data () {
-    return {
-
-    }
+    return {}
   }
 }
 
