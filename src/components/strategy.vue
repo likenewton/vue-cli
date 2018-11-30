@@ -82,7 +82,6 @@ export default {
 .section_1 {
   margin-top: 30px;
   padding-left: 300px;
-  height: 250px;
   min-height: 666px;
 
   .left {

@@ -1,7 +1,8 @@
-let [introductionTplData, strategyTplData, aboutTplData] = [{}, {}, {}]
+let [introductionTplData, strategyTplData, centerTplData, aboutTplData] = [{}, {}, {}, {}]
 
 const introduction = require.context('../tpl/introduction', true, /\d+\.(tpl)$/)
 const strategy = require.context('../tpl/strategy', true, /\d+\.(tpl)$/)
+const center = require.context('../tpl/center', true, /\d+\.(tpl)$/)
 const about = require.context('../tpl/about', true, /\d+\.(tpl)$/)
 
 // 将tpl文件打包进js中
@@ -12,6 +13,10 @@ introduction.keys().forEach((filename) => {
 strategy.keys().forEach((filename) => {
   let key = filename.replace('./', '_').replace('.tpl', '')
   strategyTplData[key] = strategy(filename)
+})
+center.keys().forEach((filename) => {
+  let key = filename.replace('./', '_').replace('.tpl', '')
+  centerTplData[key] = center(filename)
 })
 about.keys().forEach((filename) => {
   let key = filename.replace('./', '_').replace('.tpl', '')
@@ -30,6 +35,8 @@ module.exports = {
   introductionTplData,
   // 游戏攻略文章
   strategyTplData,
+  // 用户中心
+  centerTplData,
   // 关于我们文章
   aboutTplData,
   // 游戏介绍展示文章
@@ -39,25 +46,19 @@ module.exports = {
     logo: require('../image/logo_01.png')
   }],
   strategyDisTplList: [{
-    id: '_1', // 这个id很重要对应的是STATIC.tplData中的tpl
-    title: '终极狩猎，海魔来袭',
-    date: '2018-11-25',
+    id: '_1',
+    title: '捕鱼圣手之新手抓鱼小技巧',
+    date: '2018-11-30',
     logo: require('../image/logo_01.png')
+  }],
+  centerDisTplList: [{
+    id: '_1',
+    title: '我的账号',
+    icon: '&#xe607;'
   }, {
     id: '_2',
-    title: '海妖漩涡，爆金无限',
-    date: '2018-11-24',
-    logo: require('../image/logo_02.png')
-  }, {
-    id: '_3',
-    title: '钓鱼黑科技，告诉你如何新姿势钓鱼',
-    date: '2018-11-24',
-    logo: require('../image/logo_01.png')
-  }, {
-    id: '_4',
-    title: '捕鱼圣手全新版本火热来袭',
-    date: '2018-11-20',
-    logo: require('../image/logo_02.png')
+    title: '修改密码',
+    icon: '&#xe657;'
   }],
   aboutDisTplList: [{
     id: '_1',

@@ -5,6 +5,7 @@ import Introduction from '@/components/introduction'
 import Strategy from '@/components/strategy'
 import About from '@/components/About'
 import Download from '@/components/Download'
+import Center from '@/components/Center'
 
 Vue.use(Router)
 
@@ -29,5 +30,9 @@ export default new Router({
     path: '/Download',
     name: 'Download',
     component: Download
+  }, {
+    path: '/Center',
+    name: 'Center',
+    component: Center
   }]
 })

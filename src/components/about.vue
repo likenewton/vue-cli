@@ -69,6 +69,7 @@ export default {
       this.choiceId = localStorage.getItem('about_id') || this.choiceId
     }
     this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
+    document.body.scrollTop = document.documentElement.scrollTop = 0
   },
   watch: {
     '$route': function(newVal, oldVal) {

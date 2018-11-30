@@ -21,6 +21,11 @@
     overflow: hidden;
 }
 
+.block {
+    display: block;
+    width: 100%;
+}
+
 .fr {
     float: right;
 }
@@ -31,6 +36,10 @@
 
 .bold {
     font-weight: bold;
+}
+
+.color-white {
+    color: #fff;
 }
 
 .clearfix::before,
