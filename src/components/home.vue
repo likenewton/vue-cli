@@ -49,7 +49,7 @@
           <v-bar title="捕鱼攻略" extend="更多 +" @vBarExtendFn="showStrategy"></v-bar>
           <div class="newsinfo clearfix">
             <ul class="newslist">
-              <li class="news-item" v-for="(item, index) in newsList" :key="index">
+              <li class="news-item" v-for="(item, index) in newsList" :key="index" v-if="index < 5">
                 <span class="pointer"></span>
                 <router-link class="text" :to="{name: 'Strategy', query: {id: item.id}}">{{item.title}}</router-link>
               </li>
