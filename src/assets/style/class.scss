@@ -78,7 +78,9 @@
     -webkit-box-orient: vertical;
 }
 
-
+.modal-open {
+  overflow: auto;
+}
 
 .css-decoration {
     width: 100%;

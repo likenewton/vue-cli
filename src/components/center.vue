@@ -58,7 +58,7 @@
                 </b-row>
                 <b-row class="p">
                   <b-col class="offset-sm-1" sm="5">
-                    <b-button variant="warning block">马上注册</b-button>
+                    <b-button variant="warning block" @click="isShowModal=true">马上注册</b-button>
                   </b-col>
                 </b-row>
               </b-container>
@@ -67,6 +67,7 @@
         </div>
       </div>
     </div>
+    <b-modal v-model="isShowModal" title="温馨提示" ok-only>{{modalMsg}}</b-modal>
   </div>
 </template>
 <script>
@@ -89,7 +90,11 @@ export default {
       // 这里是需要展示的文章
       disTplList: STATIC.centerDisTplList,
       // 当前选定的文章id
-      choiceId: STATIC.centerDisTplList[0].id
+      choiceId: STATIC.centerDisTplList[0].id,
+      // 是否展示弹框组件（vue-bootstrap）
+      isShowModal: false,
+      // modal展示的信息
+      modalMsg: '此功能尚未开放！'
     }
   },
   methods: {

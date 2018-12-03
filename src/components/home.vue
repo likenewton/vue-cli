@@ -23,7 +23,7 @@
                   <router-link class="hover-yellow fr" :to="{name: 'Center', query: {id: '_2'}}">忘记密码？</router-link>
                 </div>
                 <div class="btn-wrapper">
-                  <b-button variant="warning" class="block">马上登录</b-button>
+                  <b-button variant="warning" class="block" @click="isShowModal=true">马上登录</b-button>
                 </div>
                 <div class="to-register">
                   <span>还没有账号？</span>
@@ -35,7 +35,7 @@
                   <img src="../assets/image/icon_byss.png">
                 </div>
                   <div class="btn-wrapper">
-                    <b-button variant="warning" class="block">开始游戏</b-button>
+                    <b-button variant="warning" class="block" @click="beginGame">开始游戏</b-button>
                   </div>
                   <div class="to-register">
                     <span>还没有账号？</span>
@@ -81,6 +81,7 @@
                 </div>
               </div>
             </div>
+            <b-modal v-model="isShowModal" title="温馨提示" ok-only>暂时无法登录</b-modal>
           </div>
 </template>
 <script>
@@ -110,7 +111,8 @@ export default {
       newsList: STATIC.strategyDisTplList,
       userName: '',
       password: '',
-      autoStatus: false
+      autoStatus: false,
+      isShowModal: false
     }
   },
   methods: {
@@ -120,6 +122,9 @@ export default {
     },
     showScreenShot() {
       this.$router.push({ name: 'Download' })
+    },
+    beginGame() {
+      this.$router.push({ name: 'Center', query: { id: STATIC.strategyDisTplList[0].id } })
     }
   },
   mounted() {
@@ -175,6 +180,7 @@ export default {
       ul {
         outline: none;
       }
+
       .nav-tabs {
         display: flex;
         justify-content: center;
