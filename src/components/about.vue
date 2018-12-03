@@ -25,6 +25,7 @@ import Vue from 'vue'
 import vBar from '@/components/common/vBar'
 import vBanner from '@/components/common/vBanner'
 import vArticleTitle from '@/components/common/vArticleTitle'
+import { mapMutations, mapState } from 'vuex'
 
 Vue.component('vBar', vBar)
 Vue.component('vBanner', vBanner)
@@ -37,17 +38,22 @@ export default {
       // 这里面有所有的文章，但不一定都需要展示
       tplData: STATIC.aboutTplData,
       // 这里是需要展示的文章
-      disTplList: STATIC.aboutDisTplList,
-      // 当前选定的文章id
-      choiceId: STATIC.aboutDisTplList[0].id
+      disTplList: STATIC.aboutDisTplList
     }
   },
   methods: {
     renderNewArticle(id) {
-      this.choiceId = id
-    }
+      this.SET_ABOUT_ID({id})
+    },
+    ...mapMutations([
+      'SET_ABOUT_ID'
+    ])
   },
   computed: {
+    ...mapState({
+      // 当前选定的文章id
+      choiceId: 'aboutId'
+    }),
     articleTpl() {
       return this.tplData[this.choiceId]
     },
@@ -64,9 +70,9 @@ export default {
   },
   mounted() {
     if (this.$route.query.id) {
-      this.choiceId = this.$route.query.id
-    } else {
-      this.choiceId = localStorage.getItem('about_id') || this.choiceId
+      this.SET_ABOUT_ID({
+        id: this.$route.query.id
+      })
     }
     this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
     document.body.scrollTop = document.documentElement.scrollTop = 0
@@ -74,8 +80,9 @@ export default {
   watch: {
     '$route': function(newVal, oldVal) {
       if (newVal.query.id) {
-        localStorage.setItem('about_id', newVal.query.id)
-        this.choiceId = newVal.query.id
+        this.SET_ABOUT_ID({
+          id: newVal.query.id
+        })
       }
       this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
       document.body.scrollTop = document.documentElement.scrollTop = 0

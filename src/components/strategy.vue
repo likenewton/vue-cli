@@ -25,6 +25,7 @@ import Vue from 'vue'
 import vBar from '@/components/common/vBar'
 import vBanner from '@/components/common/vBanner'
 import vArticleTitle from '@/components/common/vArticleTitle'
+import { mapMutations, mapState } from 'vuex'
 
 Vue.component('vBar', vBar)
 Vue.component('vBanner', vBanner)
@@ -37,17 +38,21 @@ export default {
       // 这里面有所有的文章，但不一定都需要展示
       tplData: STATIC.strategyTplData,
       // 这里是需要展示的文章
-      disTplList: STATIC.strategyDisTplList,
-      // 当前选定的文章id
-      choiceId: STATIC.strategyDisTplList[0].id
+      disTplList: STATIC.strategyDisTplList
     }
   },
   methods: {
+    ...mapMutations([
+      'SET_STRATEGY_ID'
+    ]),
     renderNewArticle(id) {
-      this.choiceId = id
+      this.SET_STRATEGY_ID({ id })
     }
   },
   computed: {
+    ...mapState({
+      choiceId: 'strategyId'
+    }),
     articleTpl() {
       return this.tplData[this.choiceId]
     },
@@ -63,14 +68,19 @@ export default {
     }
   },
   mounted() {
-    this.choiceId = localStorage.getItem('strategy_id') || this.choiceId
+    if (this.$route.query.id) {
+      this.SET_STRATEGY_ID({
+        id: this.$route.query.id
+      })
+    }
     this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
   },
   watch: {
     '$route': function(newVal, oldVal) {
       if (newVal.query.id) {
-        localStorage.setItem('strategy_id', newVal.query.id)
-        this.choiceId = newVal.query.id
+        this.SET_STRATEGY_ID({
+          id: newVal.query.id
+        })
       }
       this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
     }

@@ -45,12 +45,19 @@ module.exports = {
     title: '捕鱼圣手游戏介绍',
     logo: require('../image/logo_01.png')
   }],
+  // 游戏攻略展示文章
   strategyDisTplList: [{
     id: '_1',
     title: '捕鱼圣手之新手抓鱼小技巧',
     date: '2018-11-30',
     logo: require('../image/logo_01.png')
+  }, {
+    id: '_2',
+    title: '捕鱼圣手之中级船长的升级之路',
+    date: '2018-12-03',
+    logo: require('../image/logo_01.png')
   }],
+  // 个人中心展示文章
   centerDisTplList: [{
     id: '_1',
     title: '我的账号',
@@ -60,6 +67,7 @@ module.exports = {
     title: '修改密码',
     icon: '&#xe657;'
   }],
+  // 关于我们展示文章
   aboutDisTplList: [{
     id: '_1',
     title: '公司介绍',

@@ -76,6 +76,7 @@ import Vue from 'vue'
 import vBar from '@/components/common/vBar'
 import vBanner from '@/components/common/vBanner'
 import vArticleTitle from '@/components/common/vArticleTitle'
+import { mapMutations, mapState } from 'vuex'
 
 Vue.component('vBar', vBar)
 Vue.component('vBanner', vBanner)
@@ -89,8 +90,6 @@ export default {
       tplData: STATIC.centerTplData,
       // 这里是需要展示的文章
       disTplList: STATIC.centerDisTplList,
-      // 当前选定的文章id
-      choiceId: STATIC.centerDisTplList[0].id,
       // 是否展示弹框组件（vue-bootstrap）
       isShowModal: false,
       // modal展示的信息
@@ -98,11 +97,18 @@ export default {
     }
   },
   methods: {
+    ...mapMutations([
+      'SET_CENTER_ID'
+    ]),
     renderNewArticle(id) {
-      this.choiceId = id
+      this.SET_CENTER_ID({ id })
     }
   },
   computed: {
+    // 当前选定的文章id
+    ...mapState({
+      choiceId: 'centerId'
+    }),
     articleTpl() {
       return this.tplData[this.choiceId]
     },
@@ -119,21 +125,20 @@ export default {
   },
   mounted() {
     if (this.$route.query.id) {
-      this.choiceId = this.$route.query.id
-    } else {
-      this.choiceId = localStorage.getItem('center_id') || this.choiceId
+      this.SET_CENTER_ID({
+        id: this.$route.query.id
+      })
     }
     this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
-    document.body.scrollTop = document.documentElement.scrollTop = 0
   },
   watch: {
     '$route': function(newVal, oldVal) {
       if (newVal.query.id) {
-        localStorage.setItem('center_id', newVal.query.id)
-        this.choiceId = newVal.query.id
+        this.SET_CENTER_ID({
+          id: newVal.query.id
+        })
       }
       this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
-      document.body.scrollTop = document.documentElement.scrollTop = 0
     }
   }
 }
