@@ -6,6 +6,7 @@
       <div class="download-btn android-btn" @click="androidDownload"></div>
       <div class="download-btn ios-btn" @click="iosDownload"></div>
     </div>
+     <b-modal v-model="isShowModal" title="温馨提示" ok-only>敬请期待</b-modal>
   </div>
 </template>
 <script>
@@ -16,6 +17,7 @@ export default {
   name: 'vBanner',
   data() {
     return {
+      isShowModal: false,
       qrcode: null
     }
   },
@@ -28,7 +30,11 @@ export default {
   },
   methods: {
     iosDownload() {
-      window.open(STATIC.download.byss.ios)
+      if (STATIC.download.byss.ios) {
+        window.open(STATIC.download.byss.ios)
+      } else {
+        this.isShowModal = true
+      }
     },
     androidDownload() {
       window.open(STATIC.download.byss.android)

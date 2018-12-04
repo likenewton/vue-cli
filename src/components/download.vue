@@ -10,11 +10,11 @@
             <div class="level">
               <span class="bold">玩家推荐评星：</span>
               <span class="star">
-                <img src="../assets/image/star.png">
-                <img src="../assets/image/star.png">
-                <img src="../assets/image/star.png">
-                <img src="../assets/image/star.png">
-                <img src="../assets/image/star.png">
+                <i class="iconfont">&#xe632;</i>
+                <i class="iconfont">&#xe632;</i>
+                <i class="iconfont">&#xe632;</i>
+                <i class="iconfont">&#xe632;</i>
+                <i class="iconfont">&#xe632;</i>
               </span>
             </div>
             <div class="bold">
@@ -50,6 +50,7 @@
             </div>
           </div>
         </div>
+        <b-modal v-model="isShowModal" title="温馨提示" ok-only>敬请期待</b-modal>
       </div>
 </template>
 <script>
@@ -75,7 +76,8 @@ export default {
       }, {
         src: require('../assets/image/BPIC-5.jpg')
       }],
-      currentPage: 1
+      currentPage: 1,
+      isShowModal: false
     }
   },
   methods: {
@@ -83,7 +85,11 @@ export default {
       window.open(STATIC.download.byss.android)
     },
     downloadIos() {
-      window.open(STATIC.download.byss.ios)
+      if (STATIC.download.byss.ios) {
+        window.open(STATIC.download.byss.ios)
+      } else {
+        this.isShowModal = true
+      }
     }
   },
   mounted() {
@@ -133,6 +139,13 @@ export default {
 
     >div {
       margin: 5px 0;
+    }
+
+    .level {
+      .iconfont {
+        font-size: 14px;
+        vertical-align: top;
+      }
     }
 
     .zan {

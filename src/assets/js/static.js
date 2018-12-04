@@ -27,7 +27,7 @@ module.exports = {
   // 下载地址
   download: {
     byss: {
-      ios: 'https://agent.wcsdk.poker3a.com/static/ldy/byss/download.html',
+      ios: '',
       android: 'http://dmsdk.wcsdk.poker3a.com/android/download/54/10595'
     }
   },
@@ -55,6 +55,11 @@ module.exports = {
     id: '_2',
     title: '捕鱼圣手之中级船长的升级之路',
     date: '2018-12-03',
+    logo: require('../image/logo_01.png')
+  }, {
+    id: '_3',
+    title: '捕鱼圣手船长进阶版本-海底世界的霸主',
+    date: '2018-12-04',
     logo: require('../image/logo_01.png')
   }],
   // 个人中心展示文章
