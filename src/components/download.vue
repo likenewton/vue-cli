@@ -22,7 +22,9 @@
               <span class="fbs-right">《捕鱼圣手》 是一款休闲游戏。以深海捕鱼为背景的，有各种炫酷炮台以及丰富的场景每个场景还有特殊boss等你来战。</span>
             </div>
             <div class="zan">
-              <span class="heart"></span>
+              <span class="heart">
+                <span class="iconfont">&#xe65c;</span>
+              </span>
               <span>645032人赞过</span>
             </div>
             <div class="btns-wrapper">
@@ -153,8 +155,15 @@ export default {
 
       .heart {
         width: 25px;
-        background: url('../assets/image/ddzgw_icon.png') -75px -189px no-repeat;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid #e92322;
         vertical-align: top;
+        text-align: center;
+        line-height: 25px;
+        .iconfont {
+          font-size: 15px;
+        }
       }
 
       span {

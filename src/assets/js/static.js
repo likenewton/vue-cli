@@ -44,6 +44,10 @@ module.exports = {
     id: '_1', // 这个id很重要对应的是STATIC.tplData中的tpl
     title: '捕鱼圣手游戏介绍',
     logo: require('../image/logo_01.png')
+  }, {
+    id: '_2',
+    title: '新手船长扬帆起航之道具介绍',
+    logo: require('../image/logo_01.png')
   }],
   // 游戏攻略展示文章
   strategyDisTplList: [{
@@ -60,6 +64,11 @@ module.exports = {
     id: '_3',
     title: '捕鱼圣手船长进阶版本-海底世界的霸主',
     date: '2018-12-04',
+    logo: require('../image/logo_01.png')
+  }, {
+    id: '_4',
+    title: '新手船长扬帆起航之道具介绍',
+    date: '2018-12-05',
     logo: require('../image/logo_01.png')
   }],
   // 个人中心展示文章

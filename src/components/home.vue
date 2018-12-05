@@ -57,13 +57,13 @@
             <div class="js-Swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="../assets/image/NP1-1.jpg">
+                  <img src="../assets/image/NP1-3.jpg">
                 </div>
                   <div class="swiper-slide">
                     <img src="../assets/image/NP1-2.jpg">
                 </div>
                     <div class="swiper-slide">
-                      <img src="../assets/image/NP1-3.jpg">
+                      <img src="../assets/image/NP1-1.jpg">
                 </div>
                     </div>
                     <div class="swiper-pagination" style="cursor: default"></div>
