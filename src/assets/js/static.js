@@ -51,24 +51,24 @@ module.exports = {
   }],
   // 游戏攻略展示文章
   strategyDisTplList: [{
-    id: '_1',
-    title: '捕鱼圣手之新手抓鱼小技巧',
-    date: '2018-11-30',
+    id: '_3',
+    title: '捕鱼圣手船长进阶版本-海底世界的霸主',
+    date: '2018-09-24',
     logo: require('../image/logo_01.png')
   }, {
     id: '_2',
     title: '捕鱼圣手之中级船长的升级之路',
-    date: '2018-12-03',
+    date: '2018-09-18',
     logo: require('../image/logo_01.png')
   }, {
-    id: '_3',
-    title: '捕鱼圣手船长进阶版本-海底世界的霸主',
-    date: '2018-12-04',
+    id: '_1',
+    title: '捕鱼圣手之新手抓鱼小技巧',
+    date: '2018-09-03',
     logo: require('../image/logo_01.png')
   }, {
     id: '_4',
     title: '新手船长扬帆起航之道具介绍',
-    date: '2018-12-05',
+    date: '2018-08-08',
     logo: require('../image/logo_01.png')
   }],
   // 个人中心展示文章

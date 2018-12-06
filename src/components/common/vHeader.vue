@@ -41,9 +41,6 @@ export default {
         text: '游戏攻略',
         route: 'Strategy'
       }, {
-        text: '游戏下载',
-        route: 'Download'
-      }, {
         text: '用户中心',
         route: 'Center'
       }, {
