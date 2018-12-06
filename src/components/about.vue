@@ -73,8 +73,10 @@ export default {
       this.SET_ABOUT_ID({
         id: this.$route.query.id
       })
+    } else {
+      // BUG 使用nav切换到这里，路由自动跳转之后无法使用回退按钮了
+      this.$router.replace({ name: this.$route.name, query: { id: this.choiceId } })
     }
-    this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
     document.body.scrollTop = document.documentElement.scrollTop = 0
   },
   watch: {

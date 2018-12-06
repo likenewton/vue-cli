@@ -128,8 +128,9 @@ export default {
       this.SET_CENTER_ID({
         id: this.$route.query.id
       })
+    } else {
+      this.$router.replace({ name: this.$route.name, query: { id: this.choiceId } })
     }
-    this.$router.push({ name: this.$route.name, query: { id: this.choiceId } })
   },
   watch: {
     '$route': function(newVal, oldVal) {
