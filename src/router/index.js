@@ -9,7 +9,7 @@ import Center from '@/components/Center'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   routes: [{
     path: '/',
@@ -37,3 +37,10 @@ export default new Router({
     component: Center
   }]
 })
+
+router.beforeEach((to, from, next) => {
+  document.body.scrollTop = document.documentElement.scrollTop = 0
+  next()
+})
+
+export default router
