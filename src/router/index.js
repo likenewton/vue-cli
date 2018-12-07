@@ -10,6 +10,7 @@ import Center from '@/components/Center'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [{
     path: '/',
     name: 'Home',
