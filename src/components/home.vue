@@ -72,12 +72,12 @@
               </div>
             </div>
             <div class="section section_2">
-              <v-bar title="捕鱼截图" extend="更多 +" @vBarExtendFn="showScreenShot"></v-bar>
+              <v-bar title="捕鱼截图"></v-bar>
               <div class="screen-shot-wrapper">
                 <img v-for="(item, index) in imgList" :key="index" :src="item.src" v-show="index < currentPage * 2 && index >= (currentPage - 1) * 2">
         </div>
                 <div class="pagination-wrapper">
-                  <b-pagination :total-rows="4" v-model="currentPage" :per-page="2" hide-goto-end-buttons prev-text="上一页" next-text="下一页"></b-pagination>
+                  <b-pagination :total-rows="imgList.length" v-model="currentPage" :per-page="2" hide-goto-end-buttons prev-text="上一页" next-text="下一页"></b-pagination>
                 </div>
               </div>
             </div>
@@ -100,13 +100,9 @@ export default {
       currentPage: 1,
       swiper: null,
       imgList: [{
-        src: require('../assets/image/PIC4-1.jpg')
+        src: require('../assets/image/PIC4-5.png')
       }, {
-        src: require('../assets/image/PIC4-2.jpg')
-      }, {
-        src: require('../assets/image/PIC4-3.jpg')
-      }, {
-        src: require('../assets/image/PIC4-4.jpg')
+        src: require('../assets/image/PIC4-6.png')
       }],
       newsList: STATIC.strategyDisTplList,
       userName: '',
@@ -119,9 +115,6 @@ export default {
     showStrategy() {
       // js 跳转路由
       this.$router.push({ name: 'Strategy', query: { id: STATIC.strategyDisTplList[0].id } })
-    },
-    showScreenShot() {
-      this.$router.push({ name: 'Download' })
     },
     beginGame() {
       this.$router.push({ name: 'Center', query: { id: STATIC.strategyDisTplList[0].id } })
