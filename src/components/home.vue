@@ -117,7 +117,7 @@ export default {
       this.$router.push({ name: 'Strategy', query: { id: STATIC.strategyDisTplList[0].id } })
     },
     beginGame() {
-      this.$router.push({ name: 'Center', query: { id: STATIC.strategyDisTplList[0].id } })
+      this.$router.push({ name: 'Center', query: { id: STATIC.centerDisTplList[0].id } })
     }
   },
   mounted() {

@@ -112,17 +112,17 @@
 }
 
 @media screen and (min-width:1024px) and (max-width:1279px) {
-  .module-core {
-    width: 100%;
-    margin: 0 auto;
-  }
+  // .module-core {
+  //   width: 100%;
+  //   margin: 0 auto;
+  // }
 }
 
 @media screen and (max-width:1023px) {
-  .module-core {
-    width: 100%;
-    margin: 0 auto;
-  }
+  // .module-core {
+  //   width: 100%;
+  //   margin: 0 auto;
+  // }
 }
 
 @media screen and (min-width:1025px) {
@@ -137,13 +137,13 @@
 
   .small-scroll::-webkit-scrollbar-thumb {
     /*滚动条里面小方块*/
-    border-radius: 1;
-    background: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.25);
   }
 
   .small-scroll::-webkit-scrollbar-track {
     /*滚动条里面轨道*/
     border-radius: 0;
-    background: #c1c1c1;
+    background: #ccc;
   }
 }
