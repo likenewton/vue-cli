@@ -10,10 +10,38 @@
         <li><router-link :to="{name: 'About', query: {id: '_5'}}">网络游戏服务格式化协议必备条款</router-link></li>
       </ul>
     </div>
-    <p>北京麦麦畅游科技有限公司 联系电话：19928433571 联系地址：北京市朝阳区北苑路170号3号楼7层1单元801-77</p>
-    <p>文化部网络游戏举报和联系电子邮箱：<a href="mailto:wlwh@vip.sina.com">wlwh@vip.sina.com</a> 纠纷处理方式：联系客服或依《用户协议》约定方式处理</p>
-    <p class="youxidzbq"><a href="/static/image/wenwangwen1.jpg" target="_blank">京网文 [2015] 2363-454号</a>&nbsp;&nbsp;&nbsp;&nbsp;京ICP备16007680号&nbsp;&nbsp;&nbsp;&nbsp;文网游备字〔2017〕Ｍ-CBG 0181 号 <a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/gameNetTag/4028c08c5a164052015a3a5bde116bf7" target="_blank"><img src="../../assets/image/youxidzbq.png" width="36" alt=""></a></p>
-    <div class="rz"><a class="rz1" href=""><img src="../../assets/image/rz.png"></a><a class="rz2" href=""><img src="../../assets/image/rz.png"></a><a class="rz3" href=""><img src="../../assets/image/rz.png"></a><a class="rz4" href=""><img src="../../assets/image/rz.png"></a></div>
+    <p>
+      <span>北京麦麦畅游科技有限公司&nbsp;&nbsp;</span>
+      <span>联系电话：0898-36690405&nbsp;&nbsp;</span>
+      <span>联系地址：北京市朝阳区北苑路170号3号楼7层1单元801-77</span>
+    </p>
+    <p>
+      <span>文化部网络游戏举报和联系电子邮箱：</span>
+      <a href="mailto:wlwh@vip.sina.com">wlwh@vip.sina.com&nbsp;&nbsp;</a>
+      <span>纠纷处理方式：联系客服或依《用户协议》约定方式处理</span>
+    </p>
+    <p class="youxidzbq">
+      <a href="/static/image/wenwangwen1.jpg" target="_blank">京网文 [2015] 2363-454号&nbsp;&nbsp;</a>
+      <a href="http://www.miitbeian.gov.cn" target="_blank">京ICP备16007680号&nbsp;&nbsp;</a>
+      <span>文网游备字〔2017〕Ｍ-CSG 2408 号</span>
+      <a href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/gameNetTag/4028c08c5eb84138015eb8a7bd0d070a" target="_blank">
+        <img src="../../assets/image/youxidzbq.png" width="36" alt="">
+      </a>
+    </p>
+    <div class="rz">
+      <a class="rz1" href="">
+        <img src="../../assets/image/rz.png">
+      </a>
+      <a class="rz2" href="">
+        <img src="../../assets/image/rz.png">
+      </a>
+      <a class="rz3" href="">
+        <img src="../../assets/image/rz.png">
+      </a>
+      <a class="rz4" href="">
+        <img src="../../assets/image/rz.png">
+      </a>
+    </div>
   </div>
 </template>
 <script>

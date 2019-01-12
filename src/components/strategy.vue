@@ -5,7 +5,7 @@
       <div class="section section_1 clearfix">
         <div class="left fbs-left">
           <div class="article-list">
-            <v-bar title="攻略列表"></v-bar>
+            <v-bar title="公告列表"></v-bar>
             <div class="article-title-list">
               <v-article-title v-for="(item, index) in disTplList" :key="index" :infos="item" @toChoice="renderNewArticle"></v-article-title>
             </div>

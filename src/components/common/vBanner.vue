@@ -2,11 +2,12 @@
   <div class="v-banner">
     <div class="qrcode-wrapper">
       <img class="banner_01" src="../../assets/image/banner_01.png">
+      <img class="download_logo" src="../../assets/image/icon_byss.png">
       <div id="qrcode"></div>
       <div class="download-btn android-btn" @click="androidDownload"></div>
       <div class="download-btn ios-btn" @click="iosDownload"></div>
     </div>
-     <b-modal v-model="isShowModal" title="温馨提示" ok-only>敬请期待</b-modal>
+    <b-modal v-model="isShowModal" title="温馨提示" ok-only>敬请期待</b-modal>
   </div>
 </template>
 <script>
@@ -64,6 +65,13 @@ export default {
       height: 123px;
       top: 12px;
       left: 169px;
+    }
+
+    .download_logo {
+      position: absolute;
+      width: 128px;
+      left: 12px;
+      top: 9px;
     }
   }
 

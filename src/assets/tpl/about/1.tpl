@@ -13,6 +13,6 @@
   </div>
   <div class="p-lg">
     <span class="fbs-left">联系电话：</span>
-    <span class="fbs-right">19928433571</span>
+    <span class="fbs-right">0898-36690405</span>
   </div>
 </div>

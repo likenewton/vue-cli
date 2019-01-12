@@ -46,7 +46,7 @@
           </b-card>
         </div>
         <div class="right">
-          <v-bar title="捕鱼攻略" extend="更多 +" @vBarExtendFn="showStrategy"></v-bar>
+          <v-bar title="新闻公告" extend="更多 +" @vBarExtendFn="showStrategy"></v-bar>
           <div class="newsinfo clearfix">
             <ul class="newslist">
               <li class="news-item" v-for="(item, index) in newsList" :key="index" v-if="index < 5">
@@ -57,32 +57,26 @@
             <div class="js-Swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="../assets/image/NP1-3.jpg">
+                  <img src="../assets/image/NP1-1.jpg">
                 </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/image/NP1-2.jpg">
                 </div>
-                    <div class="swiper-slide">
-                      <img src="../assets/image/NP1-1.jpg">
-                </div>
-                    </div>
-                    <div class="swiper-pagination" style="cursor: default"></div>
-                  </div>
-                </div>
+                <div class="swiper-pagination" style="cursor: default"></div>
               </div>
             </div>
-            <div class="section section_2">
-              <v-bar title="捕鱼截图"></v-bar>
-              <div class="screen-shot-wrapper">
-                <img v-for="(item, index) in imgList" :key="index" :src="item.src" v-show="index < currentPage * 2 && index >= (currentPage - 1) * 2">
-        </div>
-                <div class="pagination-wrapper">
-                  <b-pagination :total-rows="imgList.length" v-model="currentPage" :per-page="2" hide-goto-end-buttons prev-text="上一页" next-text="下一页"></b-pagination>
-                </div>
-              </div>
-            </div>
-            <b-modal v-model="isShowModal" title="温馨提示" ok-only>暂时无法登录</b-modal>
           </div>
+        </div>
+        <div class="section section_2">
+          <v-bar title="游戏截图"></v-bar>
+          <div class="screen-shot-wrapper">
+            <img v-for="(item, index) in imgList" :key="index" :src="item.src" v-show="index < currentPage * 2 && index >= (currentPage - 1) * 2">
+        </div>
+            <div class="pagination-wrapper">
+              <b-pagination :total-rows="imgList.length" v-model="currentPage" :per-page="2" hide-goto-end-buttons prev-text="上一页" next-text="下一页"></b-pagination>
+            </div>
+          </div>
+        </div>
+        <b-modal v-model="isShowModal" title="温馨提示" ok-only>暂时无法登录</b-modal>
+      </div>
 </template>
 <script>
 import Vue from 'vue'
@@ -100,9 +94,9 @@ export default {
       currentPage: 1,
       swiper: null,
       imgList: [{
-        src: require('../assets/image/PIC4-5.png')
+        src: require('../assets/image/PIC4-1.png')
       }, {
-        src: require('../assets/image/PIC4-6.png')
+        src: require('../assets/image/PIC4-2.png')
       }],
       newsList: STATIC.strategyDisTplList,
       userName: '',
@@ -121,13 +115,7 @@ export default {
     }
   },
   mounted() {
-    this.swiper = new Swiper('.js-Swiper', {
-      loop: true,
-      pagination: '.swiper-pagination',
-      autoplay: 5000,
-      paginationClickable: true,
-      autoplayDisableOnInteraction: false
-    })
+    this.swiper = new Swiper('.js-Swiper')
   }
 }
 

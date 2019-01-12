@@ -28,7 +28,7 @@ module.exports = {
   download: {
     byss: {
       ios: '',
-      android: 'http://dmsdk.wcsdk.poker3a.com/android/download/54/10595'
+      android: 'https://dmsdk.wcsdk.poker3a.com/android/download/71/10072'
     }
   },
   // 游戏介绍文章
@@ -42,34 +42,20 @@ module.exports = {
   // 游戏介绍展示文章
   introductionDisTplList: [{
     id: '_1', // 这个id很重要对应的是STATIC.tplData中的tpl
-    title: '捕鱼圣手游戏介绍',
-    logo: require('../image/logo_01.png')
-  }, {
-    id: '_2',
-    title: '新手船长扬帆起航之道具介绍',
-    logo: require('../image/logo_01.png')
+    title: '贪吃蛇多重福利全面开启',
+    logo: require('../image/icon_byss.png')
   }],
-  // 游戏攻略展示文章
+  // 新闻公告展示文章
   strategyDisTplList: [{
-    id: '_3',
-    title: '捕鱼圣手船长进阶版本-海底世界的霸主',
-    date: '2018-09-24',
-    logo: require('../image/logo_01.png')
+    id: '_1',
+    title: '《贪吃蛇》安卓精英测试限时开启',
+    date: '2019-01-12',
+    logo: require('../image/icon_byss.png')
   }, {
     id: '_2',
-    title: '捕鱼圣手之中级船长的升级之路',
-    date: '2018-09-18',
-    logo: require('../image/logo_01.png')
-  }, {
-    id: '_1',
-    title: '捕鱼圣手之新手抓鱼小技巧',
-    date: '2018-09-03',
-    logo: require('../image/logo_01.png')
-  }, {
-    id: '_4',
-    title: '新手船长扬帆起航之道具介绍',
-    date: '2018-08-08',
-    logo: require('../image/logo_01.png')
+    title: '贪吃蛇多重福利全面开启',
+    date: '2019-01-10',
+    logo: require('../image/icon_byss.png')
   }],
   // 个人中心展示文章
   centerDisTplList: [{

@@ -3,7 +3,6 @@
     <v-header></v-header>
     <div class="page-container">
       <router-view />
-      <v-qrcode></v-qrcode>
     </div>
     <v-footer></v-footer>
   </div>
@@ -12,10 +11,8 @@
 import Vue from 'vue'
 import vHeader from '@/components/common/vHeader'
 import vFooter from '@/components/common/vFooter'
-import vQrcode from '@/components/common/vQrcode'
 Vue.component('vHeader', vHeader)
 Vue.component('vFooter', vFooter)
-Vue.component('vQrcode', vQrcode)
 
 export default {
   name: 'App'

@@ -38,7 +38,7 @@ export default {
         text: '游戏介绍',
         route: 'Introduction'
       }, {
-        text: '游戏攻略',
+        text: '新闻公告',
         route: 'Strategy'
       }, {
         text: '用户中心',
