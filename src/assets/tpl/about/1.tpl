@@ -5,7 +5,7 @@
   </div>
   <div class="p-lg">
     <span class="fbs-left">公司简介：</span>
-    <span class="fbs-right">北京麦麦畅游科技有限公司是一家以棋牌游戏为核心业务，集游戏研发（全民英雄欢乐斗地主）及发行于一体，致力于为全球用户提供优质精彩的棋牌、游戏、娱乐及服务的互联网公司。</span>
+    <span class="fbs-right">北京麦麦畅游科技有限公司是一家以休闲小游戏为核心业务，集游戏研发及发行于一体，致力于为全球用户提供优质精彩小游戏、娱乐及服务的互联网型公司。</span>
   </div>
   <div class="p-lg">
     <span class="fbs-left">公司地址：</span>
