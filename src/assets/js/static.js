@@ -33,7 +33,7 @@ module.exports = {
   },
   // 游戏介绍文章
   introductionTplData,
-  // 游戏攻略文章
+  // 新闻公告文章
   strategyTplData,
   // 用户中心
   centerTplData,
