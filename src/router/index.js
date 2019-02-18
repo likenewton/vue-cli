@@ -37,6 +37,7 @@ let router = new Router({
   }]
 })
 
+// 每当切换路由的时候将页面滚动至最顶端
 router.beforeEach((to, from, next) => {
   document.body.scrollTop = document.documentElement.scrollTop = 0
   next()

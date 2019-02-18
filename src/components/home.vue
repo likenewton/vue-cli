@@ -69,14 +69,14 @@
           <v-bar title="游戏截图"></v-bar>
           <div class="screen-shot-wrapper">
             <img v-for="(item, index) in imgList" :key="index" :src="item.src" v-show="index < currentPage * 2 && index >= (currentPage - 1) * 2">
-        </div>
-            <div class="pagination-wrapper">
-              <b-pagination :total-rows="imgList.length" v-model="currentPage" :per-page="2" hide-goto-end-buttons prev-text="上一页" next-text="下一页"></b-pagination>
-            </div>
+          </div>
+          <div class="pagination-wrapper">
+            <b-pagination :total-rows="imgList.length" v-model="currentPage" :per-page="2" hide-goto-end-buttons prev-text="上一页" next-text="下一页"></b-pagination>
           </div>
         </div>
-        <b-modal v-model="isShowModal" title="温馨提示" ok-only>暂时无法登录</b-modal>
       </div>
+      <b-modal v-model="isShowModal" title="温馨提示" ok-only>暂时无法登录</b-modal>
+    </div>
 </template>
 <script>
 import Vue from 'vue'
